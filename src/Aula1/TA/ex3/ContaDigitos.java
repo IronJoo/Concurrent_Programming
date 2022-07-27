@@ -1,4 +1,4 @@
-package Aula2.TA.ex3;
+package Aula1.TA.ex3;
 
 public class ContaDigitos extends Thread {
 
