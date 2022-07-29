@@ -5,7 +5,7 @@ public class Main {
     Transportadora transportadora = new Transportadora();
 
     //dpeois criar produtor que guarda recurso partilhado
-    Cliente cliente1 = new Cliente(1, transportadora);
+//    Cliente cliente1 = new Cliente(1, transportadora);
 
     //por fim criar consumidor que guarda recurso partilhado
 }

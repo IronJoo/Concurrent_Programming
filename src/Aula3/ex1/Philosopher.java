@@ -19,7 +19,7 @@ public class Philosopher extends Thread {
     @Override
     public void run() {
         pensar();
-        mesa.pegarGarfo(canReachFork, holdingFork);
+//        mesa.pegarGarfo(canReachFork, holdingFork);
         comer();
         mesa.pousarGarfo(holdingFork);
     }

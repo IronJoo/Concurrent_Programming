@@ -12,7 +12,7 @@ public class Cliente extends Thread { //produtor
 
     @Override
     public void run() {
-        fazEncomenda();
+//        fazEncomenda();
     }
 
     private void fazEncomenda() throws InterruptedException {
