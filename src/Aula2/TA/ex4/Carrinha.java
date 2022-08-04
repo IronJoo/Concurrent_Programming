@@ -17,9 +17,11 @@ public class Carrinha extends Thread { //consumidor
         LinkedList<Encomenda> encomendasCarregadas = null;
         try {
             encomendasCarregadas = armazem.carregar();
+            System.out.print("A carrinha " + id + " carregou as encomendas ");
             for (int i = 0; i < 5; i++){
-                System.out.println("A carrinha " + id + " carregou a encomenda " + encomendasCarregadas.get(i).getId());
+                System.out.print(encomendasCarregadas.get(i).getId() + ", ");
             }
+            System.out.println("e partiu.");
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

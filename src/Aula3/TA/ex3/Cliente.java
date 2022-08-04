@@ -5,11 +5,12 @@ import java.util.Random;
 public class Cliente extends Thread {
     private int id;
     private static int lastId = 0;
-    ContaBancaria contaBancaria = new ContaBancaria();
+    ContaBancaria contaBancaria;
     private int valorTotalDepositado = 0;
 
-    public Cliente(){
+    public Cliente(ContaBancaria conta){
         id = lastId++;
+        contaBancaria = conta;
     }
 
     @Override

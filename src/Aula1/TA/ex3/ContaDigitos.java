@@ -40,6 +40,5 @@ public class ContaDigitos extends Thread {
         thread2.start();
         thread3.start();
 
-
     }
 }

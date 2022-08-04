@@ -8,7 +8,7 @@ public class Main { //valor total na conta da 0 porque?
 
         Cliente listaClientes[] = new Cliente[10];
         for (int i = 0; i < 10; i++){
-            listaClientes[i] = new Cliente();
+            listaClientes[i] = new Cliente(contaBancaria);
             System.out.println("Cliente " + listaClientes[i].getClienteId() + " criado.");
         }
         for (int i = 0; i < 10; i++){
