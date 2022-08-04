@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
-class Prime extends Thread{
+class Prime implements Runnable {
     private int firstNumber;
     private int lastNumber;
     private CyclicBarrier barrier;

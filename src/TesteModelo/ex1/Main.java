@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Main{
-    public static void main(String[] args){
+    public static void main(String[] args){ //falta terminar, ver resolucao
 
         final int VALOR_MAX = 100;
         final int POOL_NUM = 4;
@@ -18,12 +18,14 @@ public class Main{
         int lastNumber = VALOR_MAX/POOL_NUM;
 
         for (int i = 0; i < VALOR_MAX; i = i + VALOR_MAX/POOL_NUM){
-            threadList.add(new Prime(i, i+lastNumber, barrier));
+            Prime prime = new Prime(i, i+lastNumber, barrier);
+            threadList.add(prime);
+            pool.submit(prime);
         }
 
-        for (Prime thread : threadList){
-            thread.start();
-        }
+        pool.shutdown();
+
+        //for (Prime task : )
 
     }
 }

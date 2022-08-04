@@ -8,15 +8,15 @@ public class Balanca{
         while (peso >=12.5)
             wait();
         peso += pedaco;
-        notify();
+        notifyAll();
     }
 
     public synchronized double take() throws InterruptedException{
         while (peso < 12.5)
             wait();
         double copyOfPeso = peso;
-        peso = 0;
-        notify();
+        peso -= 12.5;
+        notifyAll();
         return copyOfPeso;
     }
 
